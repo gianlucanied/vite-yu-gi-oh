@@ -17,7 +17,7 @@ export default{
 
 <template>
     <section class="container">
-        <div v-for="card in store.cards" :key="card.id" class="col-4">
+        <div v-for="card in store.cards" :key="card.id" class="col-3">
             <SingleCard :info="card"/>
             <!-- {{ card.name }} -->
         </div>
@@ -25,4 +25,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
 </style>

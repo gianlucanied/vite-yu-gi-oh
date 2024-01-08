@@ -47,4 +47,8 @@
 
 <style lang= "scss">
 @use './styles/general.scss';
+main {
+  background-color: orange;
+  padding-top: 7%;
+}
 </style>
