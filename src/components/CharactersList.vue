@@ -1,17 +1,24 @@
 <script>
 import SingleCard from './SingleCard.Vue'
+
+import {store} from '../store'
 export default{
     name: 'CharactersList',
     components: {
         SingleCard
+    },
+    data() {
+    return {
+      store,
     }
+  },
 }
 </script>
 
 <template>
     <section class="container">
-        <div class="col-4">
-            <SingleCard/>
+        <div v-for="card in store.charactersList" :key="character.id" class="col-4">
+            <SingleCard :info="character"/>
         </div>
     </section>
 </template>
