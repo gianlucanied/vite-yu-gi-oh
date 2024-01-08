@@ -17,8 +17,9 @@ export default{
 
 <template>
     <section class="container">
-        <div v-for="card in store.charactersList" :key="character.id" class="col-4">
-            <SingleCard :info="character"/>
+        <div v-for="card in store.cards" :key="card.id" class="col-4">
+            <SingleCard :info="card"/>
+            <!-- {{ card.name }} -->
         </div>
     </section>
 </template>

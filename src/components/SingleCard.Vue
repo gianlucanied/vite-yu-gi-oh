@@ -9,9 +9,9 @@ export default{
 
 <template>
     <div class="card text-center">
-        <img src="" alt="descrizione personaggio">
-        <h4>{{ data.name }}</h4>
-        <h5>Tipo carta</h5>
+        <img :src="info.card_images[0].image_url" alt="descrizione personaggio">
+        <h4>{{ info.name }}</h4>
+        <h5>{{ info.type }}</h5>
     </div>
 </template>
 

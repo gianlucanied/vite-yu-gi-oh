@@ -21,7 +21,8 @@
       .get(store.apiURL)
       .then((res => {
         // console.log(res.data.results);
-        store.charactersList = res.data
+        store.cards = res.data.data
+        // console.log(res.data.data);
       }))
       .catch((err)=>{
         console.log("Errori", err);
