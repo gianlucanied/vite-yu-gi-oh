@@ -2,13 +2,15 @@
  import axios from 'axios';
  import AppHeader from './components/AppHeader.vue'
  import CharactersList from './components/CharactersList.vue'
+ import AppChoice from './components/AppChoice.vue'
 
  import {store} from './store'
 
  export default {
   components: {
     AppHeader,
-    CharactersList
+    CharactersList,
+    AppChoice
   },
   data() {
     return {
@@ -38,6 +40,7 @@
 <template>
   <AppHeader message="Yu Gi Oh API"/>
   <main>
+    <AppChoice/>
     <div class="container">
       <CharactersList/>
     </div>
