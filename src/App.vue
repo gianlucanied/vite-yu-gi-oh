@@ -43,7 +43,6 @@
   created(){
     this.getCard();
     this.getChoice();
-    console.log(this.getChoice);
   },
 
  }
