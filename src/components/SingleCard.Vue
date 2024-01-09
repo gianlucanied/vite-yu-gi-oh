@@ -3,13 +3,16 @@ export default{
     name: 'SingleCard',
     props: {
         info: Object
+    },
+    mounted(){
+        console.log("info",this.info?.card_images);
     }
 }
 </script>
 
 <template>
     <div class="card text-center">
-        <img :src="info.card_images[0].image_url" alt="descrizione personaggio">
+        <img :src="info?.card_images[0]?.image_url" alt="descrizione personaggio">
         <h4>{{ info.name }}</h4>
         <h5>{{ info.type }}</h5>
     </div>

@@ -39,6 +39,19 @@
         console.log("Archetipi non trovati", err);
       })
     },
+    selectCards(event){
+      axios
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype="+event.target.value)
+      .then((res => {
+        console.log("store", store.cards);
+        store.cards = res.data.data
+        console.log("res", res.data);
+        
+      }))
+      .catch((err)=>{
+        console.log("Errori", err);
+      })
+    }
   },
   created(){
     this.getCard();
@@ -51,7 +64,7 @@
 <template>
   <AppHeader message="Yu Gi Oh API"/>
   <main>
-    <AppChoice/>
+    <AppChoice @change="selectCards"/>
     <div class="container">
       <CharactersList/>
     </div>
