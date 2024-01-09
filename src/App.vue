@@ -22,18 +22,30 @@
       axios
       .get(store.apiURL)
       .then((res => {
-        // console.log(res.data.results);
         store.cards = res.data.data
-        // console.log(res.data.data);
       }))
       .catch((err)=>{
         console.log("Errori", err);
       })
-    }
+    },
+    getChoice(){
+      axios
+      .get(store.apiUrlChoice)
+      .then((res => {
+        store.choices = res.data
+        console.log(res.data);
+      }))
+      .catch((err)=>{
+        console.log("Archetipi non trovati", err);
+      })
+    },
   },
   created(){
     this.getCard();
-  }
+    this.getChoice();
+    console.log(this.getChoice);
+  },
+
  }
 </script>
 

@@ -13,13 +13,13 @@ export default{
 
 <template>
 <select>
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+    <option v-for="choice in store.choices" :key="choice.id" value="choice">
+    </option>
 </select>
 </template>
 
 <style lang="scss" scoped>
-
+select {
+    width: 100px;
+}
 </style>
